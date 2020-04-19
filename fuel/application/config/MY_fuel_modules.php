@@ -39,3 +39,11 @@ $config['modules']['guestbook'] = array(
 	'model_name' => 'guestbookcomments_model',
 	'model_location' => 'guestbook'
 );
+
+
+
+
+$config['modules']['komputer'] = array(
+	'preview_path' => '', // put in the preview path on the site e.g products/{slug}
+	'model_location' => '', // put in the advanced module name here
+);

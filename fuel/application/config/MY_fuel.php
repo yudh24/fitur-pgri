@@ -25,6 +25,7 @@ $config['fuel_mode'] = 'auto';
 $config['modules_allowed'] = array(
 		'user_guide',
 		'pgri',
+		'komputer',
 );
 
 // used for system emails
