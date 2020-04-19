@@ -4,7 +4,8 @@ require_once(FUEL_PATH.'models/Base_module_model.php');
  
 class komputer_model extends Base_module_model {
    
-  public $foreign_keys = array('author_id' => '../../modules/fuel/models/fuel_users_model');
+  public $foreign_keys = array('author_id' => FUEL_PATH.'models/fuel_users_model');
+  //public $foreign_keys = array('author_id' => '../../modules/fuel/models/fuel_users_model');
   public $parsed_fields = array('content', 'content_formatted');
    
     function __construct()
