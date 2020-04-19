@@ -4,12 +4,15 @@ require_once(FUEL_PATH.'models/Base_module_model.php');
  
 class komputer_model extends Base_module_model {
    
-  public $foreign_keys = array('author_id' => FUEL_PATH.'models/fuel_users_model');
+	public $foreign_keys = array('author_id' => array(FUEL_FOLDER => 'fuel_users_model'));
   //public $foreign_keys = array('author_id' => '../../modules/fuel/models/fuel_users_model');
   public $parsed_fields = array('content', 'content_formatted');
-   
+  
     function __construct()
     {
+		$CI =& get_instance();
+		
+		//session_userdata('$key')
         parent::__construct('komputer'); // table name
     }
  
@@ -20,7 +23,7 @@ class komputer_model extends Base_module_model {
         $data = parent::list_items($limit, $offset, $col, $order, $just_count);
  
         // check just_count is FALSE or else $data may not be a valid array
-        if (empty($just_count))
+        if (empty(	$just_count))
         {
           foreach($data as $key => $val)
           {
@@ -32,9 +35,16 @@ class komputer_model extends Base_module_model {
  
     function form_fields($values = array(), $related = array())
     {
+		$valid_user = $this->fuel_auth->valid_user();
+		$authorid = $valid_user['id'];
+
+
         $fields = parent::form_fields($values, $related);
          
-        // ******************* ADD CUSTOM FORM STUFF HERE *******************
+		// ******************* ADD CUSTOM FORM STUFF HERE *******************
+		
+		$fields['author_id']['value'] = $authorid;
+		$fields['author_id']['type'] = 'hidden';
         $fields['content']['img_folder'] = 'komputer/';
         $fields['image']['folder'] = 'images/komputer/';
         $fields['thumb_image']['folder'] = 'images/komputer/thumbs/';
