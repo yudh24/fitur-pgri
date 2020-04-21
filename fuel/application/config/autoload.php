@@ -62,7 +62,7 @@ $autoload['packages'] = array(
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
 
-$autoload['libraries'] = array('fuel/asset', 'fuel/fuel','database','session');
+$autoload['libraries'] = array('fuel/asset', 'fuel/fuel','database','session','template');
 
 
 /*
