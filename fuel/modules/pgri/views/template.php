@@ -50,6 +50,7 @@
                             <ul id="menu-main-navigation" class="m-menu">
                                 <li class="menu-item menu-item-home current-menu-item menu-item-has-children"><a href="<?php echo $this->asset->assets_path('template/index.html')?>">Home</a>
                                     <ul class="sub-menu">
+                                        
                                         <li class="menu-item menu-item-home"><a href="<?php echo $this->asset->assets_path('template/index.html')?>">Homepage 1</a></li>
                                         <li class="menu-item"><a href="<?php echo $this->asset->assets_path('template/homepage-2.html')?>">Homepage 2</a></li>
                                     </ul>
@@ -217,7 +218,7 @@
                                 <ul id="menu-main-navigation-1" class="sf-menu">
                                     <li class="menu-item menu-item-home current-menu-item menu-item-has-children kingster-normal-menu"><a href="index.html" class="sf-with-ul-pre">Home</a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item menu-item-home" data-size="60"><a href="index.html">Homepage 1</a></li>
+                                            <li class="menu-item menu-item-home" data-size="60"><a href="<?php echo base_url('assets/template/index.html')?>">Homepage 1</a></li>
                                             <li class="menu-item" data-size="60"><a href="homepage-2.html">Homepage 2</a></li>
                                         </ul>
                                     </li>

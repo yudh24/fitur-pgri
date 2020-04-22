@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Instructor extends CI_Controller {
+class Instructor_detail extends CI_Controller {
 
 	function __construct(){
 		parent::__construct();		
@@ -11,6 +11,6 @@ class Instructor extends CI_Controller {
 	public function index()
 	{
 		//$this->load->view('v_homepage');
-		$this->template->load('template','/departement/v_instructor');
+		$this->template->load('template','/departement/v_profile_instructor');
 	}
 }
